@@ -1,0 +1,11 @@
+# .tex files
+*.aux
+*.bbl
+*.blg
+*.lof
+*.log
+*.lot
+*.out
+*.synctex(busy)
+*.toc
+

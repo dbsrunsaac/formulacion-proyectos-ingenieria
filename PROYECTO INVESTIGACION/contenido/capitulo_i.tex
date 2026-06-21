@@ -1,0 +1,187 @@
+\chapter{CAPITULO I - Resumen Ejecutivo}
+
+\section{Nombre del proyecto}
+
+Monitoreo de los parámetros de pH y turbidez del agua potable en el distrito de Huallarcocha, Cusco.
+
+\section{Localización}
+
+El presente proyecto de investigación se desarrollará en la Comunidad Campesina de Huayllarcocha , la cual se encuentra políticamente ubicada en el distrito, provincia y región de Cusco.
+
+El sistema de abastecimiento de agua potable en esta localidad está estructurado mediante un sistema de captación y una red comunitaria administrada localmente por la respectiva Junta Administradora de Servicios de Saneamiento (JASS) , contando con el apoyo en supervisión y mantenimiento periódico de la Municipalidad Provincial del Cusco
+
+\section{Antecedentes}
+
+\subsection{Antecedentes Nacionales}
+
+Huallpa-Vargas, Torres-Garay y Mancilla-Figueroa (2025), en su estudio para la Universidad Nacional San Cristóbal de Huamanga, evaluaron los parámetros físico-químicos y microbiológicos del agua potable en las localidades rurales de Ocana y Pichurca (Ayacucho). Metodológicamente, recolectaron 108 muestras de agua durante los periodos de estiaje y lluvias, preservándolas a temperaturas de 2-4ºC. Emplearon técnicas fotométricas, colorimétricas y nefelométricas para los análisis físico-químicos, espectrometría de emisión atómica (ICP) para metales pesados, y filtración por membrana en agar MacConkey para el análisis microbiológico. Los hallazgos revelaron deficiencias críticas en la calidad del agua, concluyendo en la necesidad de implementar tecnologías correctivas como aireadores tipo cascada, filtros de carbón activado y sistemas de cloración por goteo autorregulante. Esta investigación aporta a la presente tesis un modelo metodológico idóneo para el tratamiento y preservación de muestras en zonas rurales andinas con estacionalidad marcada
+
+Mamani Mamani (2024) implemento un sistema un sistema automatizado para el monitoreo y cloración del agua destinada al consumo humano en la Gran Unidad Escolar José Antonio Encinas, ubicada en el distrito de Juliaca, Puno. La investigación
+ 
+respondió a la necesidad de garantizar la potabilidad del agua suministrada a una comunidad educativa de aproximadamente 2900 personas, ante la falta de mecanismos eficientes de supervisión y dosificación de cloro. Para ello, el autor propuso un sistema basado en tecnologías de bajo costo, Internet de las Cosas (IoT) y redes de sensores inalámbricos (WSN), con el fin de automatizar la cloración y permitir el monitoreo remoto en tiempo real.
+
+Desde el punto de vista tecnológico, el sistema empleó como unidad de control central una placa Arduino Uno basada en el microcontrolador Atmega328P. Esta plataforma fue seleccionada por su bajo costo, confiabilidad y facilidad de integración con sensores y actuadores. Para medir la calidad del agua, se utilizó un sensor de pH analógico con rango de medición de 0 a 14, el cual fue calibrado previamente con agua destilada para asegurar lecturas confiables. Adicionalmente, se incorporaron tres sensores de nivel tipo radar ST-65A, los cuales funcionan mediante un flotador y permiten detectar el nivel del agua en los tanques de almacenamiento. Estos sensores envían señales digitales al microcontrolador para activar o desactivar el proceso de cloración según la demanda.
+
+La dosificación del cloro se realizó mediante válvulas solenoides de ½ pulgada operadas a 12 VDC, las cuales fueron controladas a través de módulos relé de estado sólido. El hipoclorito de sodio al 5\% fue seleccionado como agente desinfectante, y su cantidad se calculó en función del volumen de cada tanque utilizando fórmulas de concentración en partes por millón (ppm). La activación de las válvulas se programó con temporizadores diferenciados para garantizar una cloración progresiva y eficiente.
+
+El sistema incluyó una interfaz de usuario local compuesta por una pantalla LCD TFT de 2.4 pulgadas con controlador ILI9341, que mostraba en tiempo real el estado de cada válvula, el tiempo restante de activación y el valor de pH medido, acompañado de un mensaje textual (ej. "Neutral", "Ácido-bajo", "Alcalino"). La programación se realizó en el entorno Arduino IDE, utilizando librerías como Adafruit GFX, Adafruit ILI9341, Wire, Sodaq DS3231 para el manejo del reloj en tiempo real (RTC) y SPI para la comunicación serie. Además, los datos recolectados por los sensores fueron almacenados en la nube, lo que permitió al personal de la institución acceder a la información de forma remota y actuar rápidamente ante cualquier irregularidad en la calidad del agua.
+
+El autor concluyó que el diseño propuesto mejora significativamente la supervisión de la calidad del agua, reduce los tiempos de operación y permite una respuesta inmediata ante posibles contaminaciones. Asimismo, recomendó realizar mantenimientos periódicos de los tanques, optimizar la programación para una mayor precisión y considerar el uso de motores de presión en caso de que la altura de los tanques sea insuficiente para garantizar un flujo adecuado por gravedad.
+
+La investigación de Paredes Sandoval (2021) implementó un sistema SCADA para automatizar el llenado de reservorios de agua potable en la ciudad de Lambayeque, dando solución a los recurrentes reboses que afectaban a la empresa EPSEL S.A.,
+ 
+generando desperdicio de agua tratada, daños materiales y contaminación en áreas administrativas.
+
+Tecnológicamente, el sistema se basó en un prototipo que utilizó un sensor ultrasónico HC-SR04 para medir el nivel del agua en el tanque de distribución, conectado a una placa Arduino que actuó como unidad de procesamiento central. Para controlar el flujo, se emplearon una bomba de agua, una válvula solenoide de 12 V y dos flujómetros de 30 L/min que midieron el ingreso y salida del agua. Los datos se almacenaron y sincronizaron en tiempo real mediante Firebase Realtime Database, una base de datos NoSQL en la nube. La visualización y control se realizaron a través de una aplicación móvil llamada EPSEL SOFT, desarrollada en MIT App Inventor, la cual mostraba el nivel del tanque, estados de válvulas y bomba, flujos de entrada y salida, además de permitir la gestión de horarios de distribución y la generación de reportes históricos
+
+Aplicaron la Metodología para Desarrollar Sistemas tipo SCADA, que incluyó investigación preliminar, determinación de requerimientos, desarrollo, implementación y validación. Los resultados fueron positivos: el prototipo controló eficazmente el nivel del agua, evitó el rebose mediante el cierre automático de la bomba y la válvula de entrada, y mostró los datos en tiempo real en la aplicación móvil. El sistema fue validado mediante las normas ISO 9001 (calidad) e ISO 14001 (ambiental). obteniendo una calificación favorable por parte de los operadores de planta, el Gerente Operacional y el Supervisor de Planta.
+
+En conclusión, la investigación demostró que la integración de Arduino, sensores ultrasónicos, flujómetros, válvulas solenoides, Firebase Realtime Database y App Inventor constituye una solución viable y de bajo costo para el control y monitoreo de la distribución de agua potable, eliminando el desperdicio por rebose, reduciendo la contaminación ambiental y mejorando la continuidad del servicio a la población.
+
+\subsection{Antecedentes Internacionales}
+
+Conejeros Molina et al. (2021), en su investigación titulada “Monitoreo de calidad del agua en sistema de agua potable rural”, plantearon como objetivo principal proponer, diseñar y validar un sistema de análisis y monitoreo en tiempo real de bajo costo para evaluar las variables que determinan la calidad del agua en sistemas rurales, buscando superar las limitaciones de los métodos tradicionales de vigilancia intermitente.
+
+Para alcanzar este propósito, los autores implementaron una metodología de carácter experimental y tecnológico basada en el Internet de las Cosas . Desarrollando un prototipo utilizando Arduino y Raspberry Pi junto con sensores para medir variables como el pH, la conductividad, la turbidez, los sólidos disueltos totales (TDS), la
+ 
+temperatura y el potencial de reducción de la oxidación. Asimismo, ante el elevado costo de los sensores microbiológicos comerciales, se diseñó un sensor virtual inteligente basado en sistemas de lógica difusa, el cual predice el riesgo de contaminación microbiológica utilizando las variables físicas como datos de entrada. En cuanto a la gestión de datos, se empleó la herramienta Node-Red y la plataforma IBM Cloud para la transmisión de información en tiempo real a través de redes móviles.
+
+Como resultado de esta investigación, se logró validar con éxito el funcionamiento del prototipo tanto a nivel de laboratorio como de campo. El sistema demostró una alta capacidad para capturar, procesar y enviar datos de manera continua a la nube, activando alertas automatizadas bajo la normativa vigente. De igual manera, el sensor virtual difuso evidenció una notable efectividad predictiva, lo que reduce sustancialmente los costos operativos de la supervisión sanitaria.
+
+Por otra parte, ampliando la perspectiva hacia la gestión macro y la evaluación de riesgos en sistemas de distribución, Perveen y Amar-Ul-Haque (2023), en su artículo de revisión titulado “Drinking water quality monitoring, assessment and management in Pakistan: A review”, se propusieron como objetivo examinar de manera integral el sistema de monitoreo, evaluación y gestión del agua potable en Pakistán, identificando los desafíos técnicos desde los puntos de captación hasta el consumidor final. Para este propósito, los autores desarrollaron una metodología de revisión sistemática y documental, recopilando datos de investigaciones previas e informes oficiales emitidos por organismos gubernamentales y organizaciones no gubernamentales. El análisis se estructuró evaluando tecnologías y estrategias críticas como la Planificación de la Seguridad del Agua (WSP), la Evaluación de Impacto Ambiental (EIA) y las herramientas de análisis de riesgo microbiológico y químico. Adicionalmente, el estudio contrastó la efectividad de las políticas públicas actuales frente a las limitaciones causadas por la adopción de tecnologías de tratamiento e infraestructura obsoletas o inapropiadas en los sectores de distribución.
+
+Los resultados de esta investigación revelaron un escenario crítico en el cual la mayor parte de los suministros de agua potable presentan niveles severos de contaminación fecal y química (principalmente arsénico y flúor), lo que genera un impacto negativo latente en la salud y la economía del país. A partir de estos hallazgos, se determinó que las fallas del sistema no solo radican en la escasez del recurso, sino en la ausencia de un marco de monitoreo continuo y en una gobernanza descentralizada que ejecute metodologías preventivas en lugar de correctivas. Finalmente, este estudio aporta a la presente investigación un sólido sustento teórico en lo referente a la gestión de riesgos y la necesidad de modernización tecnológica en redes de distribución de agua. Su valor principal reside en que contextualiza los fallos de los esquemas de vigilancia tradicionales, sirviendo como un argumento científico para justificar el desarrollo y la implementación de nuevas tecnologías de monitoreo en tiempo real orientadas a mitigar riesgos sanitarios.
+
+La investigación de Leo Martínez (2024) diseñó un sistema asequible y sostenible para la monitorización en tiempo real de la calidad del agua en pequeños suministros, como depósitos comunitarios o particulares. El estudio respondió a la problemática de que 2.200 millones de personas carecen de acceso a agua potable segura y a que los sistemas comerciales de monitorización son costosos e inaccesibles para comunidades con recursos limitados.
+
+Tecnológicamente, el sistema utilizó un microcontrolador ESP32-WROOM-32 (11,49
+€) con WiFi integrado, programado en Arduino IDE. Los sensores seleccionados fueron: HC-SR04 (ultrasonidos) para nivel de agua, DHT22 para temperatura y humedad ambiente, DS18B20 sumergible para temperatura del agua, sensor de turbidez analógico (7,56 €) basado en el efecto Tyndall, y sensor de pH 450-2C (9,69
+€) con sonda BNC, calibrado mediante divisor de tensión. El montaje se realizó en una garrafa de 5 litros, con protecciones plásticas para los sensores. Para el software, se empleó InfluxDB como base de datos en la nube para almacenar las series temporales, y ThingSpeak junto con su aplicación móvil ThingView para la visualización en tiempo real de los parámetros (pH, turbidez, temperatura del agua, nivel, temperatura y humedad ambiente). Los ensayos durante dos horas demostraron valores de pH entre 7,8 y 8,0 y temperatura del agua entre 24°C y 24,5°C, dentro de los límites de la OMS (pH 6,5-8,5; turbidez 1-5 NTU).
+
+Adicionalmente, se diseñó teóricamente un sistema de alimentación solar autónomo. El estudio de consumo arrojó 150 mA en estado de conexión establecida y 250 mA durante la transmisión de datos. Se calculó una capacidad necesaria de 5275,89 mAh para un día de autonomía, proponiendo una batería de Li-Ion 26650 de 5500 mAh y dos módulos solares monocristalinos de 5V y 250 mA conectados en paralelo. El sistema completo tuvo un coste de materiales de 43,84 €, demostrando la viabilidad económica de la propuesta.
+
+En conclusión, el trabajo demostró que es posible monitorizar la calidad del agua de consumo de forma efectiva y de bajo coste utilizando ESP32, sensores económicos y plataformas gratuitas como InfluxDB y ThingSpeak, con un diseño de alimentación solar que permite su implementación en áreas remotas. El proyecto se alinea con los ODS 3, 6, 7, 9, 11 y 13.
+
+
+\section{Descripción del proyecto}
+
+
+El presente proyecto de investigación tiene como finalidad diseñar e implementar un sistema de monitoreo de la calidad del agua para consumo humano mediante la medición de los parámetros de pH y turbidez en los reservorios de abastecimiento de la Comunidad Campesina de Huayllarcocha, distrito de Cusco.
+La calidad del agua constituye un aspecto fundamental para la salud de la población, por lo que es necesario contar con mecanismos que permitan supervisar continuamente sus condiciones. En este contexto, el proyecto propone la instalación de dispositivos electrónicos equipados con sensores de pH y turbidez, capaces de realizar mediciones periódicas y automáticas en los reservorios de abastecimiento.
+El sistema estará basado en la tecnología de Internet de las Cosas (IoT), permitiendo la adquisición, transmisión y almacenamiento de datos en tiempo real. La información generada por los sensores será enviada a una plataforma digital para su visualización, monitoreo y análisis, facilitando la detección temprana de posibles alteraciones en la calidad del agua.
+
+Los datos obtenidos serán utilizados para evaluar el comportamiento de los parámetros de pH y turbidez y verificar su cumplimiento con los límites establecidos en el Reglamento de la Calidad del Agua para Consumo Humano (D.S. N.° 031-2010-SA). Asimismo, el sistema permitirá generar registros históricos que servirán como base para la toma de decisiones por parte de las autoridades locales y organizaciones responsables de la gestión del recurso hídrico.
+La implementación de esta solución tecnológica contribuirá a modernizar los procesos de vigilancia de la calidad del agua, reducir la necesidad de monitoreos manuales frecuentes y proporcionar información confiable y oportuna para garantizar un abastecimiento seguro de agua para la población de la Comunidad Campesina de Huayllarcocha.
+
+
+\section{Justificación}
+
+El acceso al agua de calidad para consumo humano constituye un derecho fundamental reconocido internacionalmente por la Asamblea General de la ONU mediante la Resolución A/RES/64/292. A pesar de este marco normativo, las comunidades rurales del distrito de Cusco, y de manera específica la Comunidad Campesina de Huayllarcocha, presentan deficiencias estructurales y sanitarias críticas en sus sistemas de abastecimiento. Por lo tanto, la presente investigación se justifica bajo los siguientes criterios:
+
+\begin{itemize}
+    \item Justificación Social y de Salud Pública: Según la OPS/OMS, las enfermedades diarreicas asociadas al consumo de agua contaminada representan la segunda causa de mortalidad infantil en las comunidades andinas rurales del Perú. Esta realidad se refleja directamente en la región Cusco, donde la DIRESA reportó más de 12,000 casos de enfermedades diarreicas agudas (EDA) en menores de 5 años. La mayor incidencia se concentra en zonas desprovistas de saneamiento básico y sistemas de desinfección eficientes, como Huayllarcocha. Este estudio se justifica socialmente al visibilizar la calidad del recurso que consume la población, aportando información clave para mitigar riesgos sanitarios en los sectores más vulnerables.
+    \item Justificación Ambiental y Técnica: Las fuentes hídricas de las comunidades rurales andinas enfrentan presiones constantes debido a factores antrópicos como las actividades agrícolas intensivas (uso de fertilizantes y pesticidas), la crianza de animales en las riberas y la total ausencia de sistemas de tratamiento de aguas residuales. Evaluar simultáneamente los parámetros físicos, químicos y microbiológicos permitirá comprender la dinámica de dispersión de contaminantes en estas microcuencas. Además, desde el punto de vista técnico, se fundamenta en la necesidad de analizar cómo las variaciones del pH y la turbidez en los reservorios rurales afectan directamente la eficiencia química de la cloración convencional.
+    \item Justificación Institucional y de Toma de Decisiones: Actualmente, las Juntas Administradoras de Servicios de Saneamiento (JASS) y las municipalidades operan bajo esquemas de vigilancia intermitentes o empíricos. Esta investigación generará una línea base técnica e integral rigurosamente sistematizada bajo los estándares del D.S. N.° 031-2010-SA. Los resultados proporcionarán una herramienta científica indispensable para que el Gobierno Regional del Cusco, la Municipalidad Provincial, la ANA y los organismos de cooperación internacional ejecuten decisiones preventivas, prioricen inversiones en infraestructura de saneamiento rural y aseguren la sostenibilidad del recurso hídrico.
+\end{itemize}
+
+\section{Mantenimiento Básico}
+
+Para asegurar la confiabilidad de los datos obtenidos por el sistema de monitoreo de pH y turbidez, se realizarán actividades periódicas de mantenimiento preventivo a los dispositivos instalados en los reservorios de abastecimiento de la Comunidad Campesina de Huayllarcocha.
+
+Las actividades de mantenimiento consistiran en:
+
+\begin{itemize}
+    \item Inspección  de los sensores y componentes electrónicos para verificar su estado físico y detectar posibles daños ocasionados por factores ambientales.
+    \item Limpieza periódica de los sensores de pH y turbidez para evitar la acumulación de sedimentos, incrustaciones o materia orgánica que puedan afectar la precisión de las mediciones.
+    \item Verificación de las conexiones eléctricas y de comunicación para garantizar la transmisión adecuada de los datos.
+    \item Revisión de la alimentación energética del sistema.
+    \item Calibración periódica de los sensores de pH y turbidez siguiendo las recomendaciones del fabricante, con el fin de mantener la exactitud de las mediciones.
+    \item Comprobación del funcionamiento del sistema de almacenamiento y visualización de datos para asegurar la integridad de la información registrada.
+    \item Actualización del software o firmware de los dispositivos cuando sea necesario para mejorar el rendimiento y la seguridad del sistema.
+\end{itemize}
+
+\section{Normativa}
+
+El desarrollo metodológico, el análisis de las variables hidrológicas y la evaluación de los resultados de esta investigación se enmarcan de manera estricta en el siguiente cuerpo normativo vigente, tanto a nivel nacional como internacional:
+
+\subsection{Normativa nacional}
+
+Leyes de la República (Rango Legislativo)
+\begin{itemize}
+    \item Ley N.º 29338 – Ley de Recursos Hídricos y su Reglamento (D.S. N.° 001-2010-AG): Regula la gestión integrada, protección y aprovechamiento sostenible de los recursos hídricos en el territorio nacional.
+    \item Ley N.° 26842 – Ley General de Salud: Específicamente el Artículo 107, el cual establece las responsabilidades del Estado y de los administradores respecto a la preservación de la calidad del agua para consumo humano.
+\end{itemize}
+
+Decretos Supremos (Rango Ejecutivo)
+
+\begin{itemize}
+    \item D.S. N.° 031-2010-SA – Reglamento de la Calidad del Agua para Consumo Humano (MINSA): Es la norma matriz sanitaria del proyecto. Establece los Límites Máximos Permisibles (LMP) microbiológicos, físicos y químicos obligatorios para asegurar la potabilidad del agua que recibe la población.
+    \item D.S. N.° 004-2017-MINAM – Estándares de Calidad Ambiental (ECA) para Agua: Define los niveles de concentración de elementos presentes en los cuerpos naturales de agua en su estado natural (fuentes de captación/manantiales), antes de recibir cualquier tratamiento de potabilización.
+\end{itemize}
+
+Resoluciones y Protocolos Oficiales (Rango Operativo)
+
+\begin{itemize}
+    \item R.J. N.º 010-2016-ANA – Protocolo Nacional para el Monitoreo de la Calidad de los Recursos Hídricos Superficiales: Establece los lineamientos técnicos estandarizados, criterios de preservación, cadena de frío y metodologías analíticas que el investigador debe seguir de forma obligatoria durante la toma de muestras en el campo.
+\end{itemize}
+
+Normativa Internacional
+
+\begin{itemize}
+    \item Organización Mundial de la Salud (OMS) – Guías para la Calidad del Agua Potable (4.ª edición, 2017): Ofrece el sustento científico global sobre los valores guía destinados a prevenir los riesgos microbiológicos y químicos en sistemas de distribución de pequeña escala.
+    \item Organización Panamericana de la Salud (OPS) – Manual de Vigilancia y Control de la Calidad del Agua para Consumo Humano: Proporciona las directrices metodológicas para la estructuración de programas comunitarios de vigilancia hídrica en entornos rurales andinos.
+    \item APHA / AWWA / WEF – Standard Methods for the Examination of Water and Wastewater (23.ª edición): Constituye el compendio técnico de referencia internacional que valida los métodos de ensayo de laboratorio (como la filtración por membrana y la espectrometría) seleccionados para este estudio.
+\end{itemize}
+
+\section{Marco Referencial}
+
+La calidad del agua se define como el conjunto de características físicas, químicas y microbiológicas que determinan su aptitud para un uso determinado. Para el consumo humano, el agua debe estar libre de agentes patógenos, sustancias tóxicas y condiciones organolépticas adversas.
+
+Los principales parámetros de calidad evaluados en el presente estudio son:
+
+\begin{itemize}
+    \item Turbidez: mide la claridad del agua causada por partículas en suspensión.
+    \item pH: indica la acidez o alcalinidad del agua.
+\end{itemize}
+
+\section{Turbidez}
+La turbidez es un parámetro  que cuantifica el grado de pérdida de claridad del agua debido a la presencia de partículas en suspensión que dispersan o absorben la luz incidente en un ángulo de 90 grados, midiéndose de forma estándar en Unidades Nefelométricas de Turbidez. En los reservorios rurales, la turbidez fluctúa por factores naturales como lluvias estacionales intensas que arrastran sedimentos de arcilla, limo y materia orgánica en las zonas de captación superficial, así como por factores antrópicos como la deforestación de la vegetación ribereña, prácticas de pastoreo no restringidas y movimientos de tierra en la cuenca.
+La presencia de turbidez elevada no es un mero inconveniente estético que genera rechazo en el consumidor; representa un riesgo microbiológico crítico. Las partículas suspendidas actúan como escudos físicos para las bacterias, virus y ooquistes de protozoarios, protegiéndolos de la radiación ultravioleta y del contacto directo con desinfectantes químicos como el cloro libre. Por consiguiente, para lograr una desinfección eficaz, el Reglamento de la Calidad del Agua para Consumo Humano en el Perú establece un Límite Máximo Permisible (LMP) de turbidez de 5 UNT en la distribución, aunque DIGESA exige valores menores a 0.5 UNT a la salida de las plantas de tratamiento.
+El análisis preciso de la turbidez en el ámbito rural enfrenta múltiples interferencias físicas durante su medición. Los operadores de las JASS deben conocer estas fuentes de error para evitar reportes falsos que comprometan la seguridad hídrica.
+
+\section{PH}
+El potencial de hidrógeno pH es una medida logarítmica de la concentración de protones libres H+ que define el carácter ácido, neutro o alcalino del agua. En los reservorios rurales, el pH está determinado principalmente por el origen geológico de la fuente y por dinámicas biológicas intrínsecas que alteran el equilibrio calco-carbónico del cuerpo de agua.
+
+\begin{itemize}
+	\item Fase Nocturna y del Amanecer: Durante la noche, la fotosíntesis se detiene debido a la ausencia de luz solar, pero la respiración celular de las plantas, algas y bacterias continúa de forma ininterrumpida. Este proceso biológico libera grandes cantidades de dióxido de carbono ($CO_2$) al agua. El $CO_2$  disuelto reacciona con las moléculas de agua para formar ácido carbónico ($H_2CO_3$), el cual se disocia liberando protones e incrementando la acidez como consecuencia directa de esta acumulación de ácido carbónico, el pH del agua alcanza su valor mínimo del día justo al amanecer.
+\end{itemize}
+    
+\section{Marco conceptual}
+
+Agua para Consumo Humano: Aquella agua apta para la ingesta directa, preparación de alimentos e higiene personal sin que represente un riesgo para la salud a lo largo de la vida. Sus características de inocuidad están determinadas por el estricto cumplimiento de los parámetros físicos, químicos y microbiológicos regulados por el Reglamento de la Calidad del Agua para Consumo Humano (D.S. N.° 031-2010-SA).
+
+Cloro Residual Libre: Fracción de  que permanece disuelta en el agua tras cumplirse el tiempo de contacto inicial y demandado por los contaminantes. Su presencia en la red de distribución (entre 0.5 y 1.0 mg/L) garantiza una protección continua y activa frente a una posible recontaminación microbiológica en el trayecto hacia las viviendas.
+
+Coliformes Termotolerantes (Fecales): Subgrupo de bacterias coliformes capaces de fermentar la lactosa con producción de gas .Su presencia en el agua es un indicador directo y específico de contaminación por excretas humanas o de animales de sangre caliente, denotando un riesgo inmediato de transmisión de patógenos entéricos.
+JASS (Junta Administradora de Servicios de Saneamiento): Organización comunal elegida democráticamente por los usuarios de una localidad rural. Cuenta con personería jurídica y está reconocida por su respectiva municipalidad y el Ministerio de Vivienda, Construcción y Saneamiento (MVCS) para encargarse de la administración, operación, mantenimiento y sostenibilidad de los servicios de agua y saneamiento dentro de su jurisdicción.
+ Límite Máximo Permisible (LMP): Concentración o grado de elementos, sustancias o parámetros físicos, químicos y microbiológicos que caracterizan al agua para consumo
+humano, la cual, al ser excedida, causa o puede causar daños a la salud. Es la medida obligatoria de control aplicable en el punto de entrega al consumidor.
+Monitoreo de la Calidad del Agua: Proceso continuo y sistemático de observación, muestreo, análisis físico-químico y microbiológico, y manejo de datos hidrológicos. Su objetivo es evaluar las tendencias temporales y espaciales del recurso hídrico para verificar su conformidad con los estándares de calidad vigentes y respaldar la toma de decisiones.
+Reservorio de Almacenamiento: Infraestructura hidráulica diseñada para almacenar un volumen de agua regulado que compensa las variaciones entre el caudal de ingreso continuo desde la captación y el consumo variable de la población a lo largo del día. En sistemas rurales, además de su función hidráulica, cumple un rol sanitario crítico al servir como cámara de contacto para el proceso de desinfección mediante cloración.
+
+\section{Marco espacial}
+
+La presente investigación se desarrollará en la Comunidad Campesina de Huayllarcocha, ubicada en el distrito de Cusco, provincia de Cusco, departamento de Cusco, Perú. El área de estudio comprende los reservorios de abastecimiento de agua destinados al consumo humano de la comunidad.
+
+COORDENADAS UTM 
+Este : 179055.29m Sur : 8506824.80m
+LIMITES 
+Por el Norte, con la Comunidad Campesina de Tambomachay 
+Por el Sur, con la Asociación Pro-Vivienda Socorropata 
+Por el Este, con la Comunidad Campesina de Yuncaypata 
+Por el Oeste, con la Comunidad Campesina de Fortaleza
+
+La elección de esta zona responde a la necesidad de contar con información actualizada sobre la calidad del agua distribuida a la población, específicamente en relación con los parámetros de pH y turbidez. Los reservorios constituyen puntos estratégicos para la instalación de sensores y dispositivos de monitoreo, permitiendo la obtención continua de datos sobre las condiciones del agua.
+La investigación se centrará en el sistema de abastecimiento de agua de la comunidad, donde se implementará una solución basada en tecnologías de Internet de las Cosas (IoT) para el monitoreo en tiempo real de los parámetros seleccionados. La información generada permitirá evaluar el comportamiento de la calidad del agua dentro del ámbito geográfico de Huayllarcocha y contribuirá a la gestión eficiente del recurso hídrico para consumo humano.
+
+
